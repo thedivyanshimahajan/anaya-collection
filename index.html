@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="color-scheme" content="light"/>
 <title>Anaya Collection — Ethnic & Festive Wear</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;color-scheme:light;}
 body{font-family:'Poppins',sans-serif;background:#FDF8F0;color:#1a1a1a;overflow-x:hidden;}
+/* Force light mode always — even if phone/browser is on dark mode */
+@media(prefers-color-scheme:dark){
+  html{background:#FDF8F0 !important;color:#1a1a1a !important;}
+  body{background:#FDF8F0 !important;color:#1a1a1a !important;}
+}
 
 @keyframes shimmer{0%{background-position:-200% center;}100%{background-position:200% center;}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
@@ -129,6 +135,7 @@ nav{background:rgba(253,248,240,0.97);backdrop-filter:blur(14px);border-bottom:1
 .prod-card{background:#fff;border-radius:20px;overflow:hidden;border:2px solid #F0E8D5;transition:all 0.3s;cursor:pointer;}
 .prod-card:hover{border-color:#D4AF37;transform:translateY(-6px);box-shadow:0 16px 48px rgba(212,175,55,0.18);}
 .prod-img{height:240px;display:flex;align-items:center;justify-content:center;font-size:5.5rem;position:relative;overflow:hidden;}
+.prod-img img{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;}
 .prod-badge{position:absolute;top:14px;left:14px;background:#C0182C;color:#fff;font-size:0.65rem;font-weight:700;padding:5px 12px;border-radius:50px;letter-spacing:1px;text-transform:uppercase;}
 .prod-badge.new{background:#0B3D4E;}
 .prod-info{padding:18px 18px 0;}
@@ -255,6 +262,7 @@ footer{background:#071318;padding:72px 6% 28px;}
   .testi-grid,.seasons-grid{grid-template-columns:1fr;}
   .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
   .products-grid{grid-template-columns:1fr 1fr;}
+  .prod-img{height:180px;font-size:4rem;}
   .about-values{grid-template-columns:1fr;}
 }
 @media(max-width:520px){
@@ -263,6 +271,7 @@ footer{background:#071318;padding:72px 6% 28px;}
   .hero-btns{flex-direction:column;}
   .hero-btns a,.hero-btns button{justify-content:center;width:100%;}
   .footer-top{grid-template-columns:1fr;}
+  .prod-img{height:160px;font-size:3.5rem;}
 }
 </style>
 </head>
