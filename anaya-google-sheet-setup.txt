@@ -1,0 +1,71 @@
+════════════════════════════════════════════════════════════════
+  ANAYA COLLECTION — GOOGLE SHEET ORDER NOTIFICATIONS (FREE, UNLIMITED)
+════════════════════════════════════════════════════════════════
+
+This makes every order appear as a NEW ROW in a Google Sheet — instantly,
+free, with no monthly limit. The seller just opens the Sheet (on phone or
+laptop) to see all orders.
+
+You only do this ONCE. ~5 minutes.
+
+────────────────────────────────────────────────────────────────
+STEP 1 — Make the Sheet
+────────────────────────────────────────────────────────────────
+1. Go to  https://sheets.google.com  and create a blank spreadsheet.
+2. Name it "Anaya Orders".
+3. In Row 1, type these headers (one per column, A to L):
+   Date | Order ID | Product | Qty | Amount | Payment | Name | Phone | Email | Address | City | Pincode
+
+────────────────────────────────────────────────────────────────
+STEP 2 — Add the Script
+────────────────────────────────────────────────────────────────
+1. In the Sheet, click  Extensions ▸ Apps Script.
+2. Delete anything in the editor, and paste this EXACTLY:
+
+----------------------------------------------------------------
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  var o = JSON.parse(e.postData.contents);
+  sheet.appendRow([
+    o.date, o.id, o.product, o.qty, o.amount, o.payment,
+    o.name, o.phone, o.email, o.address, o.city, o.pincode
+  ]);
+  return ContentService.createTextOutput("OK");
+}
+----------------------------------------------------------------
+
+3. Click the 💾 Save icon.
+
+────────────────────────────────────────────────────────────────
+STEP 3 — Deploy it (get the link)
+────────────────────────────────────────────────────────────────
+1. Click  Deploy ▸ New deployment.
+2. Click the ⚙️ gear ▸ choose "Web app".
+3. Settings:
+      Execute as:        Me
+      Who has access:    Anyone
+4. Click Deploy. Approve/allow permissions when Google asks
+   (click "Advanced" ▸ "Go to project (unsafe)" ▸ Allow — this is YOUR
+   own script, it is safe).
+5. Copy the "Web app URL" it gives you. It looks like:
+      https://script.google.com/macros/s/AKfy....../exec
+
+────────────────────────────────────────────────────────────────
+STEP 4 — Connect it to the website
+────────────────────────────────────────────────────────────────
+In index.html, find these two lines (near the top of the checkout script):
+
+   const SAVE_TO_SHEETS = false;
+   const SHEETS_WEBHOOK = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+
+Change them to:
+
+   const SAVE_TO_SHEETS = true;
+   const SHEETS_WEBHOOK = "https://script.google.com/macros/s/AKfy....../exec";
+
+Also set:   const DEMO_MODE = false;   (so it sends for real)
+
+────────────────────────────────────────────────────────────────
+DONE!  Place a test order → watch a new row appear in your Sheet. 🎉
+No limits. No monthly cap. Free forever.
+════════════════════════════════════════════════════════════════

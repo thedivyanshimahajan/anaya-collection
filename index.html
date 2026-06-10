@@ -273,6 +273,63 @@ footer{background:#071318;padding:72px 6% 28px;}
   .footer-top{grid-template-columns:1fr;}
   .prod-img{height:160px;font-size:3.5rem;}
 }
+
+/* ═══════════ CHECKOUT SYSTEM (added by Icon Divyanshi) ═══════════ */
+.co-buy{display:block;width:calc(100% - 32px);margin:14px 16px 0;background:linear-gradient(90deg,#D4AF37,#F5D78E);color:#1a1a1a;border:none;padding:12px;border-radius:10px;font-family:'Poppins',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all .25s;}
+.co-buy:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,175,55,.4);}
+.co-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(5,20,28,.78);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px;}
+.co-overlay.open{display:flex;animation:pageIn .3s ease both;}
+.co-modal{background:#FDF8F0;border-radius:22px;width:100%;max-width:440px;max-height:92vh;overflow-y:auto;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.4);}
+.co-head{background:linear-gradient(135deg,#062633,#0B3D4E);padding:22px 26px;border-radius:22px 22px 0 0;position:sticky;top:0;z-index:5;}
+.co-head h3{font-family:'Playfair Display',serif;color:#fff;font-size:1.3rem;font-weight:900;}
+.co-head h3 em{font-style:italic;color:#D4AF37;}
+.co-step-label{font-size:.66rem;color:rgba(255,255,255,.5);letter-spacing:2px;text-transform:uppercase;margin-top:5px;}
+.co-x{position:absolute;top:18px;right:20px;background:rgba(255,255,255,.14);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:1rem;cursor:pointer;line-height:1;}
+.co-body{padding:24px 26px 28px;}
+.co-step{display:none;}
+.co-step.active{display:block;animation:pageIn .3s ease both;}
+.co-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;font-size:.86rem;color:#555;border-bottom:1px dashed #E8DCC8;}
+.co-row.total{border-bottom:none;border-top:2px solid #0B3D4E;margin-top:6px;padding-top:14px;font-size:1.05rem;font-weight:700;color:#0B3D4E;}
+.co-prod-name{font-family:'Playfair Display',serif;font-weight:700;color:#0B3D4E;font-size:1.05rem;}
+.co-qty{display:inline-flex;align-items:center;border:1.5px solid #E8DCC8;border-radius:8px;overflow:hidden;}
+.co-qty button{background:#FFF8EE;border:none;width:30px;height:30px;font-size:1.1rem;cursor:pointer;color:#0B3D4E;font-weight:700;}
+.co-qty span{width:38px;text-align:center;font-weight:700;color:#0B3D4E;font-size:.9rem;}
+.co-field{margin-bottom:13px;}
+.co-field label{display:block;font-size:.7rem;font-weight:600;color:#888;letter-spacing:.5px;margin-bottom:5px;text-transform:uppercase;}
+.co-field input,.co-field textarea{width:100%;border:1.5px solid #E8DCC8;border-radius:10px;padding:11px 13px;font-family:'Poppins',sans-serif;font-size:.86rem;color:#1a1a1a;background:#fff;}
+.co-field input:focus,.co-field textarea:focus{outline:none;border-color:#D4AF37;}
+.co-field-row{display:flex;gap:11px;}
+.co-field-row .co-field{flex:1;}
+.co-coupon-toggle{display:flex;align-items:center;gap:7px;margin:14px 0 2px;padding:11px 14px;border:1.5px dashed #D4AF37;border-radius:10px;background:#FFFCF4;color:#0B3D4E;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.co-coupon-toggle:hover{background:#FFF6E0;}
+.co-coupon-toggle .arr{margin-left:auto;color:#D4AF37;font-weight:700;}
+.co-discount{display:flex;gap:8px;margin:14px 0 4px;}
+.co-discount input{flex:1;border:1.5px solid #E8DCC8;border-radius:10px;padding:10px 13px;font-family:'Poppins',sans-serif;font-size:.82rem;text-transform:uppercase;}
+.co-discount button{background:#0B3D4E;color:#fff;border:none;border-radius:10px;padding:0 18px;font-size:.78rem;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;}
+.co-disc-msg{font-size:.74rem;margin:6px 0 10px;font-weight:600;min-height:14px;}
+.co-btn{display:block;width:100%;background:linear-gradient(90deg,#D4AF37,#F5D78E);color:#1a1a1a;border:none;padding:15px;border-radius:12px;font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:1px;cursor:pointer;margin-top:18px;transition:all .25s;}
+.co-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(212,175,55,.45);}
+.co-btn.dark{background:#0B3D4E;color:#fff;}
+.co-back{background:none;border:none;color:#999;font-size:.8rem;cursor:pointer;margin-top:14px;width:100%;font-family:'Poppins',sans-serif;}
+.co-rzp-head{background:#0b2540;margin:-24px -26px 0;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;}
+.co-rzp-merchant b{font-size:1rem;font-family:'Playfair Display',serif;color:#fff;}
+.co-rzp-merchant div{font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;}
+.co-rzp-amt{color:#fff;font-size:1.2rem;font-weight:700;}
+.co-rzp-demo{display:inline-block;background:#D4AF37;color:#1a1a1a;font-size:.6rem;font-weight:700;letter-spacing:1px;padding:4px 9px;border-radius:5px;margin-top:18px;}
+.co-pay-opt{display:flex;align-items:center;gap:12px;border:1.5px solid #E8DCC8;border-radius:12px;padding:13px 15px;margin-bottom:10px;cursor:pointer;transition:all .2s;}
+.co-pay-opt:hover,.co-pay-opt.sel{border-color:#0B3D4E;background:#F3F8FB;}
+.co-pay-opt .ic{font-size:1.4rem;}
+.co-pay-opt .nm{font-size:.85rem;font-weight:600;color:#1a1a1a;}
+.co-pay-opt .sub{font-size:.7rem;color:#aaa;}
+.co-pay-opt .dot{margin-left:auto;width:18px;height:18px;border-radius:50%;border:2px solid #ccc;flex-shrink:0;}
+.co-pay-opt.sel .dot{border-color:#0B3D4E;background:#0B3D4E;box-shadow:inset 0 0 0 3px #fff;}
+.co-success{text-align:center;padding:10px 0;}
+.co-check{width:78px;height:78px;border-radius:50%;background:#1B7A34;color:#fff;font-size:2.6rem;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+.co-success h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:#0B3D4E;font-weight:900;margin-bottom:8px;}
+.co-success p{font-size:.85rem;color:#888;line-height:1.7;margin-bottom:6px;}
+.co-oid{background:#FFF8EE;border:1.5px dashed #D4AF37;border-radius:10px;padding:12px;margin:16px 0;font-weight:700;color:#0B3D4E;letter-spacing:1px;}
+.co-notify{background:#F0FAF4;border:1px solid #c8e6c9;border-radius:10px;padding:12px 14px;font-size:.76rem;color:#1B7A34;text-align:left;margin-top:14px;line-height:1.6;}
+.co-spin{width:42px;height:42px;border:4px solid #E8DCC8;border-top-color:#0B3D4E;border-radius:50%;animation:spin .8s linear infinite;margin:30px auto 18px;}
 </style>
 </head>
 <body>
@@ -521,6 +578,92 @@ footer{background:#071318;padding:72px 6% 28px;}
   </div>
 </div>
 
+<!-- ═══════════ CHECKOUT MODAL (Buy Now flow — by Icon Divyanshi) ═══════════ -->
+<div class="co-overlay" id="coOverlay">
+  <div class="co-modal">
+    <div class="co-head">
+      <button class="co-x" onclick="closeCheckout()">✕</button>
+      <h3>Anaya <em>Checkout</em></h3>
+      <div class="co-step-label" id="coStepLabel">Step 1 of 3 · Order Summary</div>
+    </div>
+    <div class="co-body">
+
+      <!-- STEP 1: ORDER SUMMARY -->
+      <div class="co-step active" id="coStep1">
+        <div class="co-row"><span class="co-prod-name" id="coProdName">Product</span></div>
+        <div class="co-row"><span>Price</span><span id="coUnitPrice">₹0</span></div>
+        <div class="co-row"><span>Quantity</span>
+          <span class="co-qty"><button onclick="coQty(-1)">−</button><span id="coQtyVal">1</span><button onclick="coQty(1)">+</button></span>
+        </div>
+        <div class="co-coupon-toggle" id="coCouponToggle" onclick="coShowCoupon()">🏷️ Have a coupon code?<span class="arr">+</span></div>
+        <div class="co-discount" id="coDiscountBox" style="display:none">
+          <input id="coCode" placeholder="Enter code (try ANAYA10)"/>
+          <button onclick="coApplyCode()">Apply</button>
+        </div>
+        <div class="co-disc-msg" id="coDiscMsg"></div>
+        <div class="co-row"><span>Subtotal</span><span id="coSubtotal">₹0</span></div>
+        <div class="co-row" id="coDiscRow" style="display:none"><span>Discount</span><span id="coDiscAmt" style="color:#1B7A34">−₹0</span></div>
+        <div class="co-row"><span>Shipping <span id="coShipNote" style="font-size:.7rem;color:#aaa"></span></span><span id="coShip">₹70</span></div>
+        <div class="co-row total"><span>Total</span><span id="coTotal">₹0</span></div>
+        <button class="co-btn" onclick="coGoStep(2)">Continue to Address →</button>
+      </div>
+
+      <!-- STEP 2: DELIVERY ADDRESS -->
+      <div class="co-step" id="coStep2">
+        <div class="co-field"><label>Full Name</label><input id="adName" placeholder="Your name"/></div>
+        <div class="co-field-row">
+          <div class="co-field"><label>Phone</label><input id="adPhone" inputmode="numeric" placeholder="10-digit mobile"/></div>
+          <div class="co-field"><label>Pincode</label><input id="adPin" inputmode="numeric" placeholder="6-digit"/></div>
+        </div>
+        <div class="co-field"><label>Email</label><input id="adEmail" placeholder="you@email.com"/></div>
+        <div class="co-field"><label>Full Address</label><textarea id="adAddr" rows="2" placeholder="House no, street, area"></textarea></div>
+        <div class="co-field-row">
+          <div class="co-field"><label>City</label><input id="adCity" placeholder="City"/></div>
+          <div class="co-field"><label>State</label><input id="adState" placeholder="State"/></div>
+        </div>
+        <button class="co-btn" onclick="coGoPay()">Proceed to Pay →</button>
+        <button class="co-back" onclick="coGoStep(1)">← Back to summary</button>
+      </div>
+
+      <!-- STEP 3: RAZORPAY PAYMENT -->
+      <div class="co-step" id="coStep3">
+        <div class="co-rzp-head">
+          <div class="co-rzp-merchant"><b>Anaya Collection</b><div>Secured by Razorpay</div></div>
+          <div class="co-rzp-amt" id="rzpAmt">₹0</div>
+        </div>
+        <div class="co-rzp-demo">⚡ DEMO MODE — no real money charged</div>
+        <div style="margin-top:18px">
+          <div class="co-pay-opt sel" onclick="coSelPay(this)"><span class="ic">📱</span><div><div class="nm">UPI</div><div class="sub">GPay, PhonePe, Paytm</div></div><span class="dot"></span></div>
+          <div class="co-pay-opt" onclick="coSelPay(this)"><span class="ic">💳</span><div><div class="nm">Card</div><div class="sub">Debit / Credit</div></div><span class="dot"></span></div>
+          <div class="co-pay-opt" onclick="coSelPay(this)"><span class="ic">🏦</span><div><div class="nm">Netbanking</div><div class="sub">All major banks</div></div><span class="dot"></span></div>
+        </div>
+        <button class="co-btn dark" onclick="coDoPay()" id="rzpPayBtn">Pay ₹0</button>
+        <button class="co-back" onclick="coGoStep(2)">← Back</button>
+      </div>
+
+      <!-- STEP 4: PROCESSING -->
+      <div class="co-step" id="coStep4">
+        <div class="co-spin"></div>
+        <p style="text-align:center;color:#888;font-size:.85rem">Processing payment securely…</p>
+      </div>
+
+      <!-- STEP 5: SUCCESS -->
+      <div class="co-step" id="coStep5">
+        <div class="co-success">
+          <div class="co-check">✓</div>
+          <h3>Order Confirmed!</h3>
+          <p>Thank you, <b id="okName">friend</b>! Your order is placed.</p>
+          <div class="co-oid" id="okOid">#ANAYA-0000</div>
+          <p id="okSummary">—</p>
+          <div class="co-notify">📩 <b>Seller notified:</b> your order &amp; address have been sent to Anaya Collection. They'll pack and ship to your pincode. <span id="okReal"></span></div>
+          <button class="co-btn" onclick="closeCheckout()" style="margin-top:18px">Done</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
@@ -552,6 +695,192 @@ function filterActive(el){el.closest('.filter-bar').querySelectorAll('.fpill').f
 function togglePill(el){el.closest('.fest-pills').querySelectorAll('.fest-pill').forEach(p=>p.classList.remove('act'));el.classList.add('act');}
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ═══════════════════════════════════════════════════════════════════
+   CHECKOUT SYSTEM  (built by Icon Divyanshi)
+   ┌───────────────────────────────────────────────────────────────┐
+   │  TO GO LIVE WITH REAL PAYMENTS (when client has a Razorpay a/c):│
+   │   1. Set  DEMO_MODE = false                                     │
+   │   2. Paste the client's REAL key in  RAZORPAY_KEY               │
+   │   3. Add the Razorpay checkout.js script tag inside <head>:     │
+   │      src = https://checkout.razorpay.com/v1/checkout.js          │
+   │  That's it — the same buttons now charge real money.           │
+   └───────────────────────────────────────────────────────────────┘ */
+const DEMO_MODE   = true;                         // ← true = simulation · false = real money
+const RAZORPAY_KEY = "rzp_test_PASTE_YOUR_KEY_HERE";
+const FREE_SHIP_ABOVE = 999;
+const SHIP_FEE = 70;
+const DISCOUNTS = { "ANAYA10":{type:"pct",val:10,label:"10% off"}, "FESTIVE200":{type:"flat",val:200,label:"₹200 off"} };
+
+/* ═══════════════════════════════════════════════════════════════════
+   WHERE DO ORDERS GO?  — seller picks ONE or BOTH (both free + unlimited)
+   ┌───────────────────────────────────────────────────────────────┐
+   │  OPTION 1 — FIREBASE  → orders show in the seller's admin panel │
+   │     Set SAVE_TO_FIREBASE = true                                 │
+   │     Paste the Realtime Database URL in FIREBASE_DB_URL          │
+   │                                                                 │
+   │  OPTION 2 — GOOGLE SHEET → each order = a new row in a Sheet    │
+   │     Set SAVE_TO_SHEETS = true                                   │
+   │     Deploy the Apps Script (see anaya-google-sheet-setup.txt)   │
+   │     Paste its web-app URL in SHEETS_WEBHOOK                      │
+   └───────────────────────────────────────────────────────────────┘ */
+const SAVE_TO_FIREBASE = false;   // Option 1 → admin panel
+const SAVE_TO_SHEETS   = false;   // Option 2 → Google Sheet
+const FIREBASE_DB_URL  = "https://YOUR-PROJECT-default-rtdb.firebasedatabase.app";
+const SHEETS_WEBHOOK   = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+
+let coState = { name:"", unit:0, qty:1, discCode:null };
+function coMoney(n){ return "₹" + Number(n).toLocaleString('en-IN'); }
+
+function openCheckout(name, price){
+  coState = { name:name, unit:price, qty:1, discCode:null };
+  document.getElementById('coCode').value = "";
+  document.getElementById('coDiscMsg').textContent = "";
+  document.getElementById('coDiscountBox').style.display = "none";   // collapse coupon (optional, like Myntra)
+  document.getElementById('coCouponToggle').style.display = "flex";
+  coRender();
+  coGoStep(1);
+  document.getElementById('coOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCheckout(){
+  document.getElementById('coOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function coQty(d){ coState.qty = Math.max(1, coState.qty + d); coRender(); }
+function coShowCoupon(){
+  document.getElementById('coCouponToggle').style.display = "none";
+  document.getElementById('coDiscountBox').style.display = "flex";
+  document.getElementById('coCode').focus();
+}
+function coApplyCode(){
+  const code = document.getElementById('coCode').value.trim().toUpperCase();
+  const msg = document.getElementById('coDiscMsg');
+  if(DISCOUNTS[code]){ coState.discCode = code; msg.style.color="#1B7A34"; msg.textContent="✓ "+DISCOUNTS[code].label+" applied!"; }
+  else { coState.discCode = null; msg.style.color="#C0182C"; msg.textContent = code ? "✕ Invalid code" : ""; }
+  coRender();
+}
+function coCalc(){
+  const subtotal = coState.unit * coState.qty;
+  let disc = 0;
+  if(coState.discCode && DISCOUNTS[coState.discCode]){
+    const d = DISCOUNTS[coState.discCode];
+    disc = d.type==="pct" ? Math.round(subtotal*d.val/100) : d.val;
+    disc = Math.min(disc, subtotal);
+  }
+  const afterDisc = subtotal - disc;
+  const ship = afterDisc >= FREE_SHIP_ABOVE ? 0 : SHIP_FEE;
+  return { subtotal, disc, ship, total: afterDisc + ship };
+}
+function coRender(){
+  const c = coCalc();
+  document.getElementById('coProdName').textContent = coState.name;
+  document.getElementById('coUnitPrice').textContent = coMoney(coState.unit);
+  document.getElementById('coQtyVal').textContent = coState.qty;
+  document.getElementById('coSubtotal').textContent = coMoney(c.subtotal);
+  document.getElementById('coShip').textContent = c.ship===0 ? "FREE" : coMoney(c.ship);
+  document.getElementById('coShipNote').textContent = c.ship===0 ? "(above ₹999)" : "";
+  document.getElementById('coTotal').textContent = coMoney(c.total);
+  const dr = document.getElementById('coDiscRow');
+  if(c.disc>0){ dr.style.display="flex"; document.getElementById('coDiscAmt').textContent = "−"+coMoney(c.disc); }
+  else dr.style.display="none";
+}
+function coGoStep(n){
+  for(let i=1;i<=5;i++){ const s=document.getElementById('coStep'+i); if(s) s.classList.remove('active'); }
+  document.getElementById('coStep'+n).classList.add('active');
+  const labels={1:"Step 1 of 3 · Order Summary",2:"Step 2 of 3 · Delivery Address",3:"Step 3 of 3 · Payment",4:"Please wait…",5:"Order Complete"};
+  document.getElementById('coStepLabel').textContent = labels[n];
+  document.querySelector('.co-modal').scrollTop = 0;
+}
+function coGoPay(){
+  const name=document.getElementById('adName').value.trim();
+  const phone=document.getElementById('adPhone').value.trim();
+  const pin=document.getElementById('adPin').value.trim();
+  const addr=document.getElementById('adAddr').value.trim();
+  if(!name || phone.replace(/\D/g,'').length<10 || pin.replace(/\D/g,'').length<6 || !addr){
+    alert("Please fill your name, a valid 10-digit phone, 6-digit pincode, and address.");
+    return;
+  }
+  const c = coCalc();
+  document.getElementById('rzpAmt').textContent = coMoney(c.total);
+  document.getElementById('rzpPayBtn').textContent = "Pay " + coMoney(c.total);
+  coGoStep(3);
+}
+function coSelPay(el){
+  document.querySelectorAll('.co-pay-opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+}
+function coDoPay(){
+  const c = coCalc();
+  if(DEMO_MODE){
+    coGoStep(4);
+    setTimeout(()=>coOrderPlaced(null), 1800);   // simulate processing
+  } else {
+    /* ═══ REAL RAZORPAY — runs only when DEMO_MODE=false, key set, script loaded ═══ */
+    const options = {
+      key: RAZORPAY_KEY, amount: c.total*100, currency: "INR",
+      name: "Anaya Collection", description: coState.name,
+      handler: function(resp){ coOrderPlaced(resp.razorpay_payment_id); },
+      prefill: { name:document.getElementById('adName').value, email:document.getElementById('adEmail').value, contact:document.getElementById('adPhone').value },
+      theme: { color: "#0B3D4E" }
+    };
+    new Razorpay(options).open();
+  }
+}
+function coSaveOrder(order){
+  // Always keep a local copy (used for the demo + as a safety backup)
+  try { const all=JSON.parse(localStorage.getItem('anaya_orders')||'[]'); all.push(order); localStorage.setItem('anaya_orders',JSON.stringify(all)); } catch(e){}
+  if(DEMO_MODE){
+    var to = [SAVE_TO_FIREBASE?'Firebase admin panel':null, SAVE_TO_SHEETS?'Google Sheet':null].filter(Boolean).join(' + ') || 'this device only';
+    console.log('🛍️ [DEMO] Order captured →', to, order);
+    return;
+  }
+  // OPTION 1 — Firebase Realtime Database (REST API, no SDK needed)
+  if(SAVE_TO_FIREBASE){
+    fetch(FIREBASE_DB_URL.replace(/\/+$/,'') + '/orders.json', { method:'POST', body: JSON.stringify(order) })
+      .catch(function(e){ console.warn('Firebase save failed:', e); });
+  }
+  // OPTION 2 — Google Sheet (free Apps Script web app)
+  if(SAVE_TO_SHEETS){
+    fetch(SHEETS_WEBHOOK, { method:'POST', mode:'no-cors', body: JSON.stringify(order) })
+      .catch(function(e){ console.warn('Sheets save failed:', e); });
+  }
+}
+function coOrderPlaced(payId){
+  const c = coCalc();
+  const oid = "ANAYA-" + Math.floor(100000 + Math.random()*900000);
+  const order = {
+    id:oid, product:coState.name, qty:coState.qty, amount:c.total,
+    payment: payId || "DEMO-PAYMENT",
+    name:document.getElementById('adName').value, phone:document.getElementById('adPhone').value,
+    email:document.getElementById('adEmail').value, address:document.getElementById('adAddr').value,
+    city:document.getElementById('adCity').value, state:document.getElementById('adState').value,
+    pincode:document.getElementById('adPin').value, date:new Date().toLocaleString('en-IN')
+  };
+  coSaveOrder(order);   // → localStorage (demo) and/or Firebase admin panel + Google Sheet (real)
+  document.getElementById('okName').textContent = order.name || "friend";
+  document.getElementById('okOid').textContent = "#" + oid;
+  document.getElementById('okSummary').textContent = order.qty+" × "+order.product+" · "+coMoney(order.amount)+" · to "+(order.city||"—")+" "+order.pincode;
+  document.getElementById('okReal').textContent = DEMO_MODE ? "(Demo: order saved on this device — view all in console: localStorage 'anaya_orders'.)" : "";
+  coGoStep(5);
+}
+
+/* Auto-add a "Buy Now" button to every product card (no need to edit each card) */
+document.querySelectorAll('.prod-card').forEach(function(card){
+  const nameEl = card.querySelector('.prod-name');
+  const priceEl = card.querySelector('.prod-price');
+  if(!nameEl || !priceEl) return;
+  const name = nameEl.textContent.trim();
+  const price = parseInt(priceEl.childNodes[0].textContent.replace(/[^0-9]/g,'')) || 0;
+  const btn = document.createElement('button');
+  btn.className = 'co-buy';
+  btn.textContent = '🛒 Buy Now';
+  btn.addEventListener('click', function(){ openCheckout(name, price); });
+  const wa = card.querySelector('.prod-wa');
+  card.insertBefore(btn, wa);
+});
+/* Close modal when clicking the dark backdrop */
+document.getElementById('coOverlay').addEventListener('click', function(e){ if(e.target===this) closeCheckout(); });
 </script>
 </body>
 </html>
